@@ -3,7 +3,7 @@
 My Thesis aimed to evaluate the Deep Learning-based segmentation on Covid-19 CT imaging for distinguishing from other diseases.
 In this page, I easily elucidate to build up my codebase for the thesis step by step.
 
-The Thesis overview is as follows.NewThesis.pdf
+The Thesis overview is as follows.
 Time Schedule (26 weeks plan, 5/10 ~ 11/10 for result)
 
 5.10 – 6.10; Describing casual scheme, data collection, Analyzing key two references 
