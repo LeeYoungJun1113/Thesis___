@@ -1,0 +1,11 @@
+# This is a simple kernel to show how to employ the COVID-19 CT dataset, as well as elucidate its contents.
+
+import glob
+import pandas  as pd
+import numpy   as np
+import nibabel as nib
+import matplotlib.pyplot as plt
+
+# Read and examine metadata
+raw_data = pd.read_csv('../input/covid19-ct-scans/metadata.csv')
+raw_data.sample(5)
