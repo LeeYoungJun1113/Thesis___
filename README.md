@@ -1,4 +1,4 @@
-# Thesis___https://github.com/LeeYoungJun1113/Thesis___/blob/9cfcd8fcc52d8ea9f6d62784500bced5d861139b/NewThesis.pdf
+# Thesis___NewThesis.pdf
 
 My Thesis aimed to evaluate the Deep Learning-based segmentation on Covid-19 CT imaging for distinguishing from other diseases.
 In this page, I easily elucidate to build up my codebase for the thesis step by step.
