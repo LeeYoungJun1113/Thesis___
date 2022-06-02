@@ -10,7 +10,7 @@ Time Schedule (26 weeks plan, 5/10 ~ 11/10 for result)
 (Data size;  Covid-19 shape; focal, invasive,  Data types-DICOM, tiff, j-son etc)
 
 6.10 – 8.10; modeling,
-(Application networks - Fundamental U-net, FCN, Seg-net etc Programming software – Colab, Python)
+(Application networks - Fundamental U-net, FCN, Seg-net etc Programming software – Colab, Python)
 
 8.10 – 9.10; Data analysis with outputs - MATLAB
 
