@@ -1,4 +1,4 @@
-# Thesis___[NewThesis.pdf](https://github.com/LeeYoungJun1113/Thesis___/blob/c8b711e7a01ff475f0623aceebba0ad02301c072/NewThesis.pdf)
+# [Thesis___.pdf](https://github.com/LeeYoungJun1113/Thesis___/blob/c8b711e7a01ff475f0623aceebba0ad02301c072/NewThesis.pdf)
 My Thesis aimed to evaluate the Deep Learning-based segmentation on Covid-19 CT imaging for distinguishing from other diseases.
 In this page, I easily elucidate to build up my codebase for the thesis step by step.
 
