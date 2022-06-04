@@ -10,10 +10,10 @@ Time Schedule (26 weeks plan, 5/10 ~ 11/10 for result)
 
 6.10 – 8.10; modeling,
 (Application networks - Fundamental U-net, FCN, Seg-net etc Programming software – Colab, Python)
- # 6.10 - 6.30 preprocessing, data segmentation - 20 sampling data, masks (lung, infection, fusion) 
- # 7.10 – 7.15 processing, mount neural networks (Unet, Segnet)
- # 7.16 – 7.30 learning with 20 data, internal validation (train 16, test 4)
- # 7.16 – 8.10 all data (100) applications to the system
+ ## 6.10 - 6.30 preprocessing, data segmentation - 20 sampling data, masks (lung, infection, fusion) 
+ ## 7.10 – 7.15 processing, mount neural networks (Unet, Segnet)
+ ## 7.16 – 7.30 learning with 20 data, internal validation (train 16, test 4)
+ ## 7.16 – 8.10 all data (100) applications to the system
 
 8.10 – 9.10; Data analysis with outputs - MATLAB
 
