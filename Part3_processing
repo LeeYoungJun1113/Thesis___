@@ -1,0 +1,93 @@
+import glob
+import pandas  as pd
+import numpy   as np
+import nibabel as nib
+import matplotlib.pyplot as plt
+import tensorflow as tf
+from tensorflow.keras import datasets, layers, models
+from zipfile import ZipFile
+from shutil import copyfile, copyfileobj
+import gzip
+from IPython.display import clear_output
+import cv2
+import os
+from pylab import rcParams
+import PIL
+from PIL import Image
+import scipy
+from google.colab import files
+from sklearn.model_selection import train_test_split
+from google.colab import drive
+from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans, MeanShift
+import imgaug as ia
+import imgaug.augmenters as iaa
+
+print("Version: ", tf.__version__)
+print("Eager mode: ", tf.executing_eagerly())
+print("GPU is", "available" if tf.config.experimental.list_physical_devices("GPU") else "NOT AVAILABLE")
+
+import sys
+import random
+import warnings
+
+import math
+import seaborn as sns; sns.set()
+from keras.callbacks import Callback
+from keras.losses import binary_crossentropy
+from tqdm import tqdm_notebook, tnrange
+from itertools import chain
+from skimage.io import imread, imshow, concatenate_images
+from skimage.transform import resize
+from skimage.morphology import label
+
+from keras.models import Model, load_model
+from keras.layers import Input, BatchNormalization, Activation, Dense, Dropout
+from keras.layers.core import Lambda, RepeatVector, Reshape
+from keras.layers.convolutional import Conv2D, Conv2DTranspose
+from keras.layers.pooling import MaxPooling2D, GlobalMaxPool2D
+from keras.layers.merge import concatenate, add
+from keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau, LearningRateScheduler
+#from keras.optimizer_v2 import adam
+from tensorflow.keras.optimizers import Adam
+from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
+from keras import backend as K
+import joblib
+import gc
+import segmentation_models as sm
+
+
+
+test_load = nib.load('/content/gdrive/MyDrive/K_THESIS/input/covid19-ct-scans/ct_scans/coronacases_org_001.nii')
+
+test_img = test_load.get_fdata()
+test_img = np.rot90(np.array(test_img))
+test_img = test_img*255
+# test_img = np.uint8(test_img)
+test_img_flattened = test_img.flatten()
+
+clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
+test_clahe_img = clahe.apply(test_img)
+test_clahe_img_flattened = test_clahe_img.flatten(test_clahe_img)
+
+fig = plt.figure()
+rcParams['figure.figsize'] = 10,10
+
+plt.subplot(2,2,1)
+plt.imshow(test_img[:,:,100], cmap='bone')
+plt.title("Test CT image")
+
+plt.subplot(2,2,2)
+plt.hist(test_img_flattened)
+plt.title("Flattened histogram")
+
+plt.subplot(2,2,3)
+plt.imshow(test_clahe_image)
+plt.title("CLAHE CT image")
+
+plt.subplot(2,2,4)
+plt.hit(test_clahe_image_flattened)
+
+plt.show()
+
+## 07.11
